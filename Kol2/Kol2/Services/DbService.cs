@@ -34,12 +34,14 @@ namespace Kol2.Services
 
         public async Task<ICollection<GetAlbum>> GetAlbums(string id)
         {
-            var list= _mainDbContext.Albums.Where(e => e.IdAlbum == int.Parse(id)).Select(x=>
-            {
-                new GetAlbum { AlbumName = x.AlbumName, TracksNames = x.Tracks.Select(p => new GetTrack { TrackName = p.TrackName, Duration = p.Duration }).ToList() };
-            });
+            // var list = _mainDbContext.Albums.Where(e => e.IdAlbum == int.Parse(id)).ToList();
+            // var l = list.Select(x =>
+            // {
+            //      new GetAlbum { AlbumName = x.AlbumName, Tracks = x.Tracks.Select(p => new GetTrack { TrackName = p.TrackName, Duration = p.Duration }).ToList() };
+            //  }).ToList();
 
-            return list;
+            // return l;
+            return new List<GetAlbum>();
         }
     }
 }
