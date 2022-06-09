@@ -7,5 +7,7 @@ namespace Kol2.Models.DTO
 {
     public class GetAlbum
     {
+        public string AlbumName { get; set; }
+        public ICollection<GetTrack> TracksNames { get; set; }
     }
 }
