@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Kol2.Services;
+using Kol2.Models;
 namespace Kol2
 {
     public class Startup
@@ -27,6 +28,7 @@ namespace Kol2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IDbService, DbService>();
+            services.AddDbContext<MainDbContext>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

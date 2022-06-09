@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Kol2.Services
 {
-    public class DbService
+    public class DbService : IDbService
     {
     }
 }
